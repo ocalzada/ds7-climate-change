@@ -29,9 +29,8 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Value Proposition
+            ## How much will temperatures change where you live?
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
 
             ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
 
@@ -39,7 +38,7 @@ column1 = dbc.Col(
 
             """
         ),
-        dcc.Link(dbc.Button('Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Find Out !', color='primary'), href='/predictions')
     ],
     md=4,
 )
