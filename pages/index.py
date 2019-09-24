@@ -43,9 +43,19 @@ column1 = dbc.Col(
     md=4,
 )
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
+import plotly.graph_objects as go
+
+fig = go.Figure()
+
+fig.update_layout(
+    images=[dict(
+        source="assets/climate temperature predictions.png",
+        xref="paper", yref="paper",
+        x=1, y=1.05,
+        sizex=0.2, sizey=0.2,
+        xanchor="right", yanchor="bottom"
+    )],
+)
 
 column2 = dbc.Col(
     [
