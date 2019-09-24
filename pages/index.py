@@ -43,19 +43,7 @@ column1 = dbc.Col(
     md=4,
 )
 
-import plotly.graph_objects as go
-
-fig = go.Figure()
-
-fig.update_layout(
-    images=[dict(
-        source="assets/climate temperature predictions.png",
-        xref="paper", yref="paper",
-        x=1, y=1.05,
-        sizex=0.2, sizey=0.2,
-        xanchor="right", yanchor="bottom"
-    )],
-)
+fig = html.Img(src=app.get_asset_url('assets/climate temperature predictions.png'))
 
 column2 = dbc.Col(
     [
