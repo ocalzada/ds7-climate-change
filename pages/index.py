@@ -43,4 +43,10 @@ column1 = dbc.Col(
     md=4,
 )
 
-html.Div(html.Img(src='climate temperature predictions.png', className='img-fluid')
+column2 = dbc.Col(
+    [html.Img(src='assets/climate temperature predictions.png', className='img-fluid')
+    ]
+)
+
+
+layout = dbc.Row([column1, column2])
