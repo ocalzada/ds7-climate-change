@@ -43,4 +43,4 @@ column1 = dbc.Col(
     md=4,
 )
 
-html.Img(src='assets/climate temperature predictions.png', className='img-fluid')
+html.Div(html.Img(src='climate temperature predictions.png', className='img-fluid')
