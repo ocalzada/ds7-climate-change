@@ -46,7 +46,7 @@ column1 = dbc.Col(
 column2 = dbc.Col(
     [html.Img(src='assets/climate temperature predictions.png', className='img-fluid'),
     dcc.Markdown('''
-    ->**Predicted World Temperature Anomalies for the Next 100 Years**<-
+    ## **Predicted World Temperature Anomalies for the Next 100 Years**
     ''')
     ]
 )
