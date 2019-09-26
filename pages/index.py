@@ -42,13 +42,3 @@ column1 = dbc.Col(
     ],
     md=4,
 )
-
-fig = html.Img(src=app.get_asset_url('assets/climate temperature predictions.png'))
-
-column2 = dbc.Col(
-    [
-        dcc.Graph(figure=fig),
-    ]
-)
-
-layout = dbc.Row([column1, column2])
