@@ -29,26 +29,24 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## How will average global temperatures change into the future?
+            ### How will global temperatures change into the future?
 
-            Specifically, by when will we reach the 1.5-2 degrees C threshold above which climate scientists agree
-            will no longer sustain life as we know it?
+            Specifically, when will we reach the 1.5-2 degrees C threshold above which climate scientists agree will no longer sustain life as we know it?
 
-            Using historical data (1880-2019) for monthly average global temperature anomalies
-            in degrees Celsius, we developed a model to predict degrees C changes for the next 100 years.
+            Using historical data (1880-2019) for monthly average global temperature anomalies in degrees Celsius, we developed a model to predict temperature 
+            anomalies into the future, which represents global temperature rise.
 
-            This app uses data collected by [NOAA.gov](https://www.ncdc.noaa.gov/cag/global/data-info). 
-            Data includes combined global land and ocean temperature anomalies, which are calculated relative
-            to the 20th century average. A positive anomaly indicates that the observed temperature was warmer
-            than the baseline, while a negative anomaly indicates a cooler observation. NOAA uses weather stations
-            and drifting ocean buoys to measure land and sea surface conditions, respectively.
+            This app uses data collected by [NOAA.gov](https://www.ncdc.noaa.gov/cag/global/data-info), which was obtained using weather stations and drifting 
+            ocean buoys to measure land and sea surface conditions. These observations were converted into temperature anomalies, calculated relative to the 20th 
+            century average temperature for that location. A positive anomaly indicates that the observed temperature was warmer than the average, while a negative 
+            anomaly indicates a cooler observation. 
 
 
             """
         ),
         dcc.Link(dbc.Button('Find Out !', color='primary'), href='/predictions')
     ],
-    md=4,
+    md=5,
 )
 
 column2 = dbc.Col(
