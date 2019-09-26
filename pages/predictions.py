@@ -11,18 +11,18 @@ import plotly.graph_objects as go
 
 from app import app
 
-# Read in the dataframe
-df = pd.read_csv('https://datahub.io/core/global-temp/r/monthly.csv')
-df = df[df.Source == 'GCAG']
-df = df[['Date', 'Mean']]
-df['Date'] = pd.to_datetime(df['Date'], infer_datetime_format=True)
-df = df.rename(columns={'Date':'ds', 'Mean': 'y'})
+# # Read in the dataframe
+# df = pd.read_csv('https://datahub.io/core/global-temp/r/monthly.csv')
+# df = df[df.Source == 'GCAG']
+# df = df[['Date', 'Mean']]
+# df['Date'] = pd.to_datetime(df['Date'], infer_datetime_format=True)
+# df = df.rename(columns={'Date':'ds', 'Mean': 'y'})
 
-m = Prophet(interval_width=0.95)
-m.fit(df)
+# m = Prophet(interval_width=0.95)
+# m.fit(df)
 
-future = m.make_future_dataframe(freq='m', periods=100*12)
-forecast = m.predict(future)
+# future = m.make_future_dataframe(freq='m', periods=100*12)
+# forecast = m.predict(future)
 
 
 column1 = dbc.Col(
@@ -63,46 +63,47 @@ column1 = dbc.Col(
     md=4,
 )
 
-column2 = dbc.Col(
-    # [
-    #     dcc.Graph(
-    #         id='prediction-graph', 
-    #         figure={
-    #             'data': [
-    #                 {
-    #                     'x': forecast['ds'],
-    #                     'y': forecast['yhat'],
-    #                     'mode': 'bar',
+layout = dbc.Row([column1]
+# column2 = dbc.Col(
+#     # [
+#     #     dcc.Graph(
+#     #         id='prediction-graph', 
+#     #         figure={
+#     #             'data': [
+#     #                 {
+#     #                     'x': forecast['ds'],
+#     #                     'y': forecast['yhat'],
+#     #                     'mode': 'bar',
                         
-    #                 }
-    #             ]
-    #         },
-    #         style={'width': '80%',
-    #             'margin-left': 'auto',
-    #             'margin-right': 'auto'
-    #         }),
+#     #                 }
+#     #             ]
+#     #         },
+#     #         style={'width': '80%',
+#     #             'margin-left': 'auto',
+#     #             'margin-right': 'auto'
+#     #         }),
         
-    # ]
-)
-
-layout = dbc.Row([column1, column2])
-
-# @app.callback(
-#     Output('prediction-graph', 'figure'),
-#     [Input(component_id='ds', component_property='value')]
+#     # ]
 # )
-# def graph(Date):
 
-#     mask = (forecast['ds'] == Date)
+# layout = dbc.Row([column1, column2])
 
-#     layout= go.Layout(
-#         yaxis={'title': 'Degree C Anomaly'},
-#         barmode='group',
-#         title=('Predicted Global Temperature Anomaly')
-#     )
+# # @app.callback(
+# #     Output('prediction-graph', 'figure'),
+# #     [Input(component_id='ds', component_property='value')]
+# # )
+# # def graph(Date):
 
-#     data=[
-#         go.Bar(name='Predicted', x=forecast[mask]['ds'], y=forecast['yhat'])
-#     ]
+# #     mask = (forecast['ds'] == Date)
 
-#     return {'data':data, 'layout':layout}
+# #     layout= go.Layout(
+# #         yaxis={'title': 'Degree C Anomaly'},
+# #         barmode='group',
+# #         title=('Predicted Global Temperature Anomaly')
+# #     )
+
+# #     data=[
+# #         go.Bar(name='Predicted', x=forecast[mask]['ds'], y=forecast['yhat'])
+# #     ]
+
+# #     return {'data':data, 'layout':layout}
