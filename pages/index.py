@@ -42,7 +42,7 @@ column1 = dbc.Col(
             anomaly indicates a cooler observation. 
 
 
-            """,style={'textAlign': 'left','font-size': '14px'}
+            """,style={'textAlign': 'left','font-size': '10px'}
         ),
         dcc.Link(dbc.Button('Find Out !', color='primary'), href='/predictions')
     ],
@@ -51,11 +51,7 @@ column1 = dbc.Col(
 
 column2 = dbc.Col(
     [
-        html.Img(src='assets/climate-temperature-predictions.png', className='img-fluid'),
-        dcc.Markdown('''
-        **Temperature Anomaly Predictions for the Next 100 Years**
-        ''', style={'textAlign': 'center'}
-        )
+        html.Img(src='assets/climate-change-stock-photo.jpg', className='img-fluid')
     ]
 )
 
