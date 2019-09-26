@@ -64,25 +64,25 @@ column1 = dbc.Col(
 )
 
 column2 = dbc.Col(
-    [
-        dcc.Graph(
-            id='prediction-graph', 
-            figure={
-                'data': [
-                    {
-                        'x': forecast['ds'],
-                        'y': forecast['yhat'],
-                        'mode': 'bar',
+    # [
+    #     dcc.Graph(
+    #         id='prediction-graph', 
+    #         figure={
+    #             'data': [
+    #                 {
+    #                     'x': forecast['ds'],
+    #                     'y': forecast['yhat'],
+    #                     'mode': 'bar',
                         
-                    }
-                ]
-            },
-            style={'width': '80%',
-                'margin-left': 'auto',
-                'margin-right': 'auto'
-            }),
+    #                 }
+    #             ]
+    #         },
+    #         style={'width': '80%',
+    #             'margin-left': 'auto',
+    #             'margin-right': 'auto'
+    #         }),
         
-    ]
+    # ]
 )
 
 layout = dbc.Row([column1, column2])
