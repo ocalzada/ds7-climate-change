@@ -63,7 +63,8 @@ column1 = dbc.Col(
     md=4,
 )
 
-layout = dbc.Row([column1]
+layout = dbc.Row([column1])
+
 # column2 = dbc.Col(
 #     # [
 #     #     dcc.Graph(
