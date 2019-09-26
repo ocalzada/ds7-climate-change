@@ -33,7 +33,7 @@ column1 = dbc.Col(
 
             Specifically, when will we reach the 1.5-2 degrees C threshold above which climate scientists agree will no longer sustain life as we know it?
 
-            Using historical data (1880-2019) for monthly average global temperature anomalies in degrees Celsius, we developed a model to predict temperature 
+            Using historical data (1880-2016) for monthly average global temperature anomalies in degrees Celsius, we developed a model to predict temperature 
             anomalies into the future, which represents global temperature rise.
 
             This app uses data collected by [NOAA.gov](https://www.ncdc.noaa.gov/cag/global/data-info), which was obtained using weather stations and drifting 
@@ -42,7 +42,7 @@ column1 = dbc.Col(
             anomaly indicates a cooler observation. 
 
 
-            """,style={'textAlign': 'left','font-size': '20px'}
+            """,style={'textAlign': 'left','font-size': '14px'}
         ),
         dcc.Link(dbc.Button('Find Out !', color='primary'), href='/predictions')
     ],
