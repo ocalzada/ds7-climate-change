@@ -51,6 +51,7 @@ column1 = dbc.Col(
     md=4,
 )
 
+<<<<<<< HEAD
 html.Img(src='assets/climate-temperature-predictions.png', className='img-fluid')
 
 column2 = dbc.Col(
@@ -60,7 +61,15 @@ column2 = dbc.Col(
         **Temperature Anomaly Prediction for Next 100 Years**
         ''', style={'textAlign': 'center'}
         )
+=======
+column2 = dbc.Col(
+    [html.Img(src='assets/climate-temperature-predictions.png', className='img-fluid'),
+    dcc.Markdown('''
+    **Predicted World Temperature Anomalies for the Next 100 Years**
+    ''', style={'textAlign': 'center'})
+>>>>>>> 605a802bd0606b085f6760d0c022caa7982871d6
     ]
 )
+
 
 layout = dbc.Row([column1, column2])
