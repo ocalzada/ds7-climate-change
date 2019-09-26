@@ -87,22 +87,22 @@ column2 = dbc.Col(
 
 layout = dbc.Row([column1, column2])
 
-@app.callback(
-    Output('prediction-graph', 'figure'),
-    [Input(component_id='ds', component_property='value')]
-)
-def graph(Date):
+# @app.callback(
+#     Output('prediction-graph', 'figure'),
+#     [Input(component_id='ds', component_property='value')]
+# )
+# def graph(Date):
 
-    mask = (forecast['ds'] == Date)
+#     mask = (forecast['ds'] == Date)
 
-    layout= go.Layout(
-        yaxis={'title': 'Degree C Anomaly'},
-        barmode='group',
-        title=('Predicted Global Temperature Anomaly')
-    )
+#     layout= go.Layout(
+#         yaxis={'title': 'Degree C Anomaly'},
+#         barmode='group',
+#         title=('Predicted Global Temperature Anomaly')
+#     )
 
-    data=[
-        go.Bar(name='Predicted', x=forecast[mask]['ds'], y=forecast['yhat'])
-    ]
+#     data=[
+#         go.Bar(name='Predicted', x=forecast[mask]['ds'], y=forecast['yhat'])
+#     ]
 
-    return {'data':data, 'layout':layout}
+#     return {'data':data, 'layout':layout}
