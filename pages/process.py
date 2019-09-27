@@ -14,14 +14,13 @@ column1 = dbc.Col(
             ----------------------------------------------------------------------
             ### Mean Baselines
 
-            ![](assets/mean-baseline.png)
-
-
             For this regression, the mean baseline is shown above.  
             When splitting the data into training and testing datasets (cutoff = 1980-01-01) and predicting
             the average climate temperature anomaly for the training set for every time point, the `Mean Absolute Error` to beat
             was `MAE: 0.149`.
 
+            ![](assets/mean-baseline.png)
+            
             &emsp;
 
             ### Model Selection, Iteration, and Facebook's Prophet
