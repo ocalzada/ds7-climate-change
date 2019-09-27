@@ -21,7 +21,7 @@ fig.add_trace(go.Scatter(x=df.ds, y=df['yhat'], name="Prediction",
 fig.add_trace(go.Scatter(x=df.ds, y=df['y'], name="Actual",
                          line_color='dimgray'))
 
-fig.update_layout(title_text='Time Series with Rangeslider',
+fig.update_layout(title_text='Climate Temperature Anomaly Time Series with Range Slider',
                   xaxis_rangeslider_visible=True)
 fig.show()
 

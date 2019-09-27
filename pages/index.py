@@ -42,7 +42,7 @@ column1 = dbc.Col(
             anomaly indicates a cooler observation. 
 
 
-            """,style={'textAlign': 'left','font-size': '10px'}
+            """,style={'textAlign': 'left','font-size': '12px'}
         ),
         dcc.Link(dbc.Button('Find Out !', color='primary'), href='/predictions')
     ],
